@@ -1,52 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<GridPane fx:controller="assignment7.LoginFXMLController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+<GridPane alignment="center" hgap="10" prefHeight="455.0" prefWidth="565.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="assignment7.LoginFXMLController">
+    <padding><Insets bottom="10" left="25" right="25" top="25" /></padding>
+   <ImageView fitHeight="109.0" fitWidth="395.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2147483647">
+      <image>
+         <Image url="@zlack.png" />
+      </image>
+   </ImageView>
+   <Label alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="278.0" text="Chat for Millenials." textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <font>
+         <Font name="Arial Italic" size="16.0" />
+      </font>
+   </Label>
 
-    <Text text="Welcome! Please sign in."
-          GridPane.columnIndex="0" GridPane.rowIndex="0"
-          GridPane.columnSpan="2"/>
+    <Text text="Welcome! Please sign in." GridPane.columnSpan="2" GridPane.rowIndex="2" />
 
-    <Label text="Username:"
-           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Label text="Username:" GridPane.rowIndex="3" />
 
-    <TextField fx:id="username"
-            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <Label text="Password:" GridPane.rowIndex="4" />
+   <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-    <Label text="Host Number:"
-           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Label text="Host Number:" GridPane.rowIndex="5" />
 
-    <TextField fx:id="hostnumber"
-            GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <TextField fx:id="hostnumber" promptText="8080" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-    <Label text="Host IP:"
-           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Label text="Host IP:" GridPane.rowIndex="6" />
 
-    <TextField fx:id="hostaddress"
-               GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <TextField fx:id="hostaddress" promptText="localhost" GridPane.columnIndex="1" GridPane.rowIndex="6" />
 
-    <HBox spacing="10" alignment="bottom_right"
-          GridPane.columnIndex="1" GridPane.rowIndex="4">
-        <Button text="Sign In" fx:id="signinbutton"
-                onAction="#submitButtonPress"/>
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+        <Button fx:id="signinbutton" onAction="#submitButtonPress" text="Sign In" />
 
 
     </HBox>
 
-    <Text text="" fx:id="loginresult"
-          GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Text fx:id="loginresult" text="" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 
 
 </GridPane>

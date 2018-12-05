@@ -116,7 +116,6 @@ public class ChannelFXMLController {
 
         if(text.startsWith("/help")){
             chatview.appendText("\nType: \n" +
-                    "/help for more help \n" +
                     "/create [CHANNEL NAME] to create and join a new channel \n" +
                     "/join [channel name] to join a channel with the specified name \n" +
                     "/list to list all available channels \n" +
