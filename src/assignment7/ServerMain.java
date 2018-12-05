@@ -21,11 +21,17 @@ public class ServerMain {
 
 
     public static void main(String[] args) {
+        ServerView.main(args);
+
+    }
+
+    public static void serverStart(int portNum){
+
         broadcastCh = new Channel("Broadcast");
         channels.add(broadcastCh);
         ServerSocket chatRoom;
         try {
-            chatRoom = new ServerSocket(8080);
+            chatRoom = new ServerSocket(portNum);
             System.out.println("Started Server!");
             while (true) {
                 Socket newUser = chatRoom.accept();
@@ -44,5 +50,6 @@ public class ServerMain {
 
 
     }
+
 }
 

@@ -20,7 +20,7 @@ public class LoginView extends Application {
 
 
         //Login Screen
-        primaryStage.setTitle("Sign In");
+        primaryStage.setTitle("zlack - Login");
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/LoginView.fxml"));
         GridPane loginGridpane = loader.load();
